@@ -1,4 +1,4 @@
-My Implementation Of The First Template Of The Four Templates From Elzero's Frontend Learning Path. It Is Also My First Time Implementing Responsive Website
+My Implementation Of The second Template Of The Four Templates From Elzero's Frontend Learning Path.
 
 Technology Used: 1-HTML 2-CSS (Pure)
 
