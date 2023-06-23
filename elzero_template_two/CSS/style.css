@@ -313,6 +313,16 @@ header .container::after {
     color: #777;
 }
 
+@media (max-width: 767px) {
+    .services .service {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .services .service .text p {
+        margin-bottom: 30px;
+    }
+}
+
 @media (min-width: 768px) {
     .services .services-content {
         display: grid;
@@ -391,6 +401,12 @@ header .container::after {
 .design .image {
     text-align: center;
     bottom: -150px;
+}
+
+@media (max-width: 767px) {
+    .design .image {
+        display: none;
+    }
 }
 
 .portfolio ul {
