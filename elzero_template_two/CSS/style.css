@@ -409,6 +409,10 @@ header .container::after {
     }
 }
 
+.portfolio {
+    padding-bottom: 100px;
+}
+
 .portfolio ul {
     display: flex;
     justify-content: center;
@@ -422,4 +426,70 @@ header .container::after {
 .portfolio ul .active {
     background-color: var(--main-color);
     color: white;
+}
+
+.portfolio .images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio .images .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .images .box img {
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+    .portfolio .images .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .portfolio .images .box {
+        flex-basis: 25%;
+    }
+}
+
+.portfolio .images .box .text {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    bottom: -100px;
+    
+}
+
+.portfolio .images .box:hover .text {
+    bottom: 0;
+}
+
+.portfolio .images .box:hover img {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.portfolio .images .text h3 {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.portfolio .images .text p {
+    color: var(--main-color);
+}
+
+.portfolio .more-button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-color);
+    padding: 15px 20px;
+    margin: 30px auto;
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
 }
