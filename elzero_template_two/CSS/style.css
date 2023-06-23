@@ -1,6 +1,7 @@
 :root {
     --main-color: #19c8fa;
     --transparent-color: rgb(15 116 143 / 70%);
+    --section-padding: 100px;
 }
 * {
     padding: 0px;
@@ -14,7 +15,6 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: black;
 }
 
 ul {
@@ -25,6 +25,52 @@ ul {
     padding-left: 15px;
     padding-right: 15px;
     margin: auto;
+}
+
+.main-heading {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.main-heading h3 {
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+.main-heading h3::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: #333;
+    bottom: -30px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.main-heading h3::after {
+    content: "";
+    position: absolute;
+    bottom: -38px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: white;
+}
+
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
 }
 
 @media (min-width: 768px) {
@@ -213,6 +259,15 @@ header .container::after {
     left: 30px;
 }
 
+@media (max-width: 767px) {
+    .landing .content {
+        width: 100%;
+    }
+    .landing .change-background {
+        display: none;
+    }
+}
+
 .landing .bullets {
     position: absolute;
     left: 50%;
@@ -235,4 +290,120 @@ header .container::after {
 .landing .bullets li.active {
     background-color: var(--main-color);
     border-color: var(--main-color);
+}
+
+.services .container {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.services .service {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.services .service .text h3 {
+    color: #19c8fa;
+    margin-bottom: 45px;
+}
+
+.services .service .text p {
+    line-height: 2;
+    color: #777;
+}
+
+@media (min-width: 768px) {
+    .services .services-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-column-gap: 40px;
+        grid-row-gap: 60px;
+    }
+    .services .container {
+        text-align: start;
+    }
+    .services .service .text h3 {
+        color: #19c8fa;
+        margin-bottom: 45px;
+    }
+
+    .services .service {
+        margin-right: 50px;
+    }
+}
+
+.design {
+    background-image: url(../imgs/design-features.jpg);
+    background-size: cover;
+    height: 600px;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.design::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.design .image,
+.design .text {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.design .text {
+    width: 50%;
+    top: 50%;
+    padding: 50px;
+    transform: translateY(-50%);
+    color: white;
+    background-color: var(--transparent-color);
+}
+
+.design .text h3 {
+    font-weight: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+.design .text ul li {
+    margin: 25px 0px;
+}
+
+.design .text ul li::before {
+    content: "\f108";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 30px;
+    position: relative;
+    top: 2px;
+}
+
+.design .image {
+    text-align: center;
+    bottom: -150px;
+}
+
+.portfolio ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.portfolio ul li {
+    padding: 10px;
+}
+
+.portfolio ul .active {
+    background-color: var(--main-color);
+    color: white;
 }
