@@ -569,6 +569,7 @@ header .container::after {
 
 .stats {
     background-image: url(../imgs/stats.png);
+    background-size: cover;
     position: relative;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -637,4 +638,178 @@ header .container::after {
 
 .stats .container .box p {
     font-size: 15px;
+}
+
+.skills .container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.skills .container > div {
+    flex-basis: 45%;
+}
+
+@media (max-width: 992px) {
+    .skills .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.skills .container .testimonials .text h3,
+.skills .container .skill-set .text h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skills .container .testimonials .text p,
+.skills .container .skill-set .text p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 60px;
+}
+
+.skills .container .testimonials .box {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.skills .container .testimonials .box img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.skills .container .testimonials .box .quote {
+    border-bottom: 1px solid #ccc;
+}
+
+.skills .container .testimonials .box .quote p {
+    margin-bottom: 30px;
+    line-height: 2;
+
+}
+
+.skills .container .testimonials .box .quote h4 {
+    text-align: end;
+    color: #777;
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.skills .container .testimonials .bullets {
+    display: flex;  
+    position: relative;
+    left: calc(50% - 20px);
+    gap: 10px;
+}
+
+.skills .container .testimonials .bullets span {
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #a2a2a2;
+    border-radius: 50%;
+}
+
+.skills .container .testimonials .bullets span.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    .skills .container .testimonials .box {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skills .container .testimonials .box .quote p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.skills .container .prog-bars > h3 {
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.skills .container .prog-bars .prog {
+    background-color: #dedadc;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+.skills .container .prog-bars .prog span {
+    display: block;
+    background-color: var(--main-color);
+    height: 100%;
+    position: relative;
+}
+
+.skills .container .prog-bars .prog span::before {
+    content: attr(data-prog);
+    color: white;
+    background-color: black;
+    padding: 3px;
+    position: absolute;
+    top: -35px;
+    right: -18px;
+    border-radius: 5px;
+}
+
+.skills .container .prog-bars .prog span::after {
+    content: "";
+    border-width: 8px;
+    border-color: black transparent transparent;
+    border-style: solid;
+    position: absolute;
+    top: -12px;
+    right: -7px;
+}
+
+.quote-section {
+    background-image: url(../imgs/quote.jpg);
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.quote-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+}
+
+.quote-section .text {
+    position: relative;
+    color: white;
+}
+
+.quote-section .text p {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.quote-section .text h3 {
+    font-weight: normal;
+    font-size: 18px;
 }
