@@ -661,6 +661,10 @@ header .container::after {
     }
 }
 
+.skills .container .testimonials {
+    position: relative;
+}
+
 .skills .container .testimonials .text h3,
 .skills .container .skill-set .text h3 {
     text-transform: uppercase;
