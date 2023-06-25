@@ -489,6 +489,7 @@ header .container::after {
     background-color: var(--main-color);
     padding: 15px 20px;
     margin: 30px auto;
+    border: none;
     display: block;
     width: fit-content;
     text-transform: uppercase;
@@ -817,4 +818,95 @@ header .container::after {
 .quote-section .text h3 {
     font-weight: normal;
     font-size: 18px;
+}
+
+.pricing .container .prices {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.pricing .container .prices .box {
+    border-top: 1px solid var(--main-color);
+    background-color: #fcfcfc;
+}
+
+.pricing .container .prices .box .type h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pricing .container .prices .box .price {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .prices .box .price::before {
+    content: "$";
+    font-size: 25px;
+    position: absolute;
+    top: -15px;
+    left: 25%;
+}
+
+.pricing .container .prices .box .price h3::after {
+    content: "/mo";
+    font-size: 20px;
+}
+
+.pricing .container .prices .box .box-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pricing .container .prices .box .box-container p:not(:last-child) {
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .prices .box .box-container p:last-child {
+    border-bottom: 1px solid var(--main-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.pricing .container .prices .box .buy-now {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: fit-content;
+    padding: 20px;
+    margin: auto;
+    color: #3485d6;
+    border: 1px solid var(--main-color);
+}
+
+.pricing .container .contact {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.pricing .container .contact p {
+    font-size: 20px;
+}
+
+.pricing .container .contact button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-color);
+    padding: 15px 20px;
+    margin: 15px auto;
+    border: none;
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
 }
