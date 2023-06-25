@@ -713,7 +713,8 @@ header .container::after {
 .skills .container .testimonials .bullets {
     display: flex;  
     position: absolute;
-    left: calc(50% - 20px);
+    left: 50%;
+    transform: translate(-50%);
     gap: 10px;
 }
 
